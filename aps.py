@@ -11,7 +11,8 @@ import ssl
 import random
 import asyncio
 import aiohttp
-from urllib.parse import urlparse
+import re
+from urllib.parse import urlparse, urljoin
 from typing import Set, List, Dict, Optional, Tuple
 from dataclasses import dataclass, field
 from queue import Queue
@@ -635,7 +636,5 @@ async def main():
     await scanner.run()
 
 if __name__ == "__main__":
-    import re
-    from urllib.parse import urljoin
     asyncio.run(main())
 
